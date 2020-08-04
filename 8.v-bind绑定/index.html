@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <!-- v-bind   class style  -->
+    <div id="app">
+        <!-- <div v-bind:a="aa" v-bind:b="bb"></div> -->
+        <!-- <div :a="aa" :[aa]="bb"></div> -->
+        <!-- <div v-bind="{name:'chentan',age:'18',height:'160cm'}"></div> -->
+        <!-- <img :src="imgUrl" alt=""> -->
+
+        <!-- 绑定class -->
+        <!-- <div :class="cl1"></div> -->
+        <!-- <div :class="{cl1:true}"></div> -->
+        <!-- <div :class="{cl2:class2}"></div> -->
+        <!-- <div :class="[class1,class3]"></div> -->
+        <!-- <div :class="[{cl2:class2},class1]"></div> -->
+        <!-- <div :style="{width:'100px',height:'100px',backgroundColor:'red'}"></div> -->
+        <!-- <div :style="styleA"></div> -->
+        <!-- <div :style="[styleA,styleB]"></div> -->
+        <!-- <svg :view-box.camel="viewBox"></svg> -->
+
+        <div :text-content.prop="'阿坛'"></div>
+    </div>
+    <script>
+        
+        const vm=new Vue({
+            el:'#app',
+            data:{
+                viewBox:'0 0 100 100',
+                aa:'aaa',
+                bb:'bbb',
+                imgUrl:'https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3153608679,2730471646&fm=85&app=92&f=JPEG?w=121&h=75&s=FE3B0FC71033359400A5182E0300904A',
+                class1:'red',
+                class2:true,
+                class3:'green',
+                styleA:{
+                    width:'200px',
+                    height:'200px',
+                    backgroundColor:'green'
+                },
+                styleB:{
+                    border:'10px solid #0ff',
+                    backgroundImage:'linear-gradient(#f00,#00f)'
+                }
+            }
+        })
+    </script>
+</body>
+</html>
