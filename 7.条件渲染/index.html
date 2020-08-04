@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <!-- v-if  v-else-if  v-else  v-show(display:none) -->
+    <div id="app">
+        <!-- <div v-if="type==='A'">阿坛第一</div>
+        <div v-else-if="type==='B'">阿坛第二</div>
+        <div v-else-if="type==='C'">阿坛第三</div>
+        <div v-else>阿坛第四</div> -->
+        <!-- <template v-if="show">
+            <div>阿坛最美</div>
+            <div>阿坛最美</div>
+            <div>阿坛最美</div>
+            <div>阿坛最美</div>
+        </template> -->
+        <!-- <div v-show="show">阿坛瘦下来</div> -->
+        <template v-show="show">
+            <div>阿坛瘦下来</div>
+            <div>阿坛瘦下来</div>
+            <div>阿坛瘦下来</div>
+            <div>阿坛瘦下来</div>
+        </template>
+    </div>
+    <script>
+        const vm=new Vue({
+            el:'#app',
+            data:{
+                show:1,
+                type:'a'
+            }
+        })
+    </script>
+</body>
+</html>
