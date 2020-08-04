@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+
+    <input type="text">
+    <button>click</button>
+    <div id="app" v-html="msg">
+        
+    </div>
+     <!-- <img src="" onerror="while(1){alert('哈哈')}"> -->
+    <script>
+        //v-pre  v-cloak  v-once  v-text  v-html
+
+        const inp=document.getElementsByTagName('input')[0];
+        const btn=document.getElementsByTagName('button')[0];
+        
+        const vm=new Vue({
+            el:'#app',
+            data:{
+                msg:'hello world',
+            }
+        })
+        btn.onclick=function(){
+            vm.msg=inp.value;
+        }
+    </script>
+</body>
+</html>
