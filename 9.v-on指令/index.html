@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <button v-on:click="counter+=1">点击</button> -->
+        <!-- <button v-on:click="count">点击</button> -->
+        <!-- <button @click="count">点击</button> -->
+        <!-- <button v-on="{click:count}">点击</button> -->
+        <!-- <button v-on:click="count">点击</button> -->
+        <!-- <button v-on:click="count(3)">点击</button> -->
+        <button v-on:click="count(5,$event)">点击</button>
+        <p>这个button按钮被点击了{{ counter }}次</p>
+    </div>
+
+    <script>
+        const vm=new Vue({
+            el:'#app',
+            data:{
+                counter:0,
+            },
+            methods:{
+                // count(e){
+                //     this.counter++;
+                //     console.log(e.target);
+                // }
+                // count(num){
+                //     this.counter+=num;
+                // }
+                count(num,e){
+                    this.counter+=5;
+                    console.log(e.target);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
