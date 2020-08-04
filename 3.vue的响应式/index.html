@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>  
+    <div id="app">
+        {{ tan }}
+    </div>
+    <script>
+        const vm=new Vue({
+            el:'#app',
+            data:{
+                msg:'阿坛你最美',
+                tan:{
+                    name:'chen',
+                    age:18,
+                },
+                arr:[1,2,3]
+            }
+        })
+        vm.$set(vm.tan,'height',160);
+        vm.$set(vm.tan,'weight',110);
+        console.log(vm);
+        // vm.$mount('#app'); 可以用vue对象上的$mount方法来锁定vue对象的控制区域
+        //{{}}两个花括号表示插值表达式，中间写的内容左右都要用空格隔开；
+        //{{}}，可以写number，string，Boolean，object,(undefined/null时页面不显示)
+        //{{}}，可以写表达式 1+1  1>2  三目运算符
+        //data里面的值可以实时更新，data中的变量直接放在vm对象下,未使用和未声明的变量（如：引用对象，然后给对象加一个属性）不更新
+        //vm.$set,vm.$delete
+    </script> 
+</body>
+</html>
